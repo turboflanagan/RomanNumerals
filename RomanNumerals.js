@@ -3,7 +3,7 @@
 
 
    // ***** First Test ******
-   
+/*
 function convert(num) {
   var inputArr = num.toString().split("");
 
@@ -19,7 +19,21 @@ function convert(num) {
 }
 
 convert(433);
+*/
 
+
+// ******* Second Test ********
+
+var inputArr = num.toString().split("");
+var romanArr = [ "","I","II","III","IV","V","VI","VII","VIII","IX","X",
+"XX","XXX","XL","L","LX","LXX","LXXX","XC",
+"C","CC","CCC","CD","D","DC","DCC","DCCC","CM",]
+
+for(i = 0; i <= num; i++){
+    if(num <= 10){
+	  return(romanArr[num]);
+    } 
+}
 
 
 
