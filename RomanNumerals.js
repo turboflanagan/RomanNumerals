@@ -24,20 +24,34 @@ convert(433);
 
 // ******* Second Test ********
 
-var inputArr = num.toString().split("");
-var romanArr = [ "","I","II","III","IV","V","VI","VII","VIII","IX","X",
-"XX","XXX","XL","L","LX","LXX","LXXX","XC",
-"C","CC","CCC","CD","D","DC","DCC","DCCC","CM",]
+// var inputArr = num.toString().split("");
+// var romanArr = [ "","I","II","III","IV","V","VI","VII","VIII","IX","X",
+// "XX","XXX","XL","L","LX","LXX","LXXX","XC",
+// "C","CC","CCC","CD","D","DC","DCC","DCCC","CM",]
 
-for(i = 0; i <= num; i++){
-    if(num <= 10){
-	  return(romanArr[num]);
-    } 
-}
-
-
+// for(i = 0; i <= num; i++){  // num should have been inputArr.length
+//     if(num <= 10){
+// 	  return(romanArr[num]);
+//     } 
+// }
 
 
+
+
+// ******* Third Test ********
+
+var romanNumsArr = [[ "","I","II","III","IV","V","VI","VII","VIII","IX","X"],
+                ["XX","XXX","XL","L","LX","LXX","LXXX","XC"],
+                ["C","CC","CCC","CD","D","DC","DCC","DCCC","CM",]];
+
+
+function makeRomNumbs(num){
+  var romanNumerals = "";
+  var inputArray = num.toString().split("").reverse();  //  .reverse() is what I was missing! :-)
+  for(i = 0; i <inputArray.length; i++){
+    romanNumerals = romanNumsArr[i][parseInt(inputArray[i])] + romanNumerals;
+  }  
+};
 
 
 /*
