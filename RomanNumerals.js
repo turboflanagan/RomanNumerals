@@ -40,9 +40,28 @@ convert(433);
 
 // ******* Third Test ********
 
+// var romanNumsArr = [[ "","I","II","III","IV","V","VI","VII","VIII","IX","X"],
+//                 ["XX","XXX","XL","L","LX","LXX","LXXX","XC"],
+//                 ["C","CC","CCC","CD","D","DC","DCC","DCCC","CM",]];
+
+
+// function makeRomNumbs(num){
+//   var romanNumerals = "";
+//   var inputArray = num.toString().split("").reverse();  //  .reverse() is what I was missing! :-)
+//   for(i = 0; i <inputArray.length; i++){
+//     romanNumerals = romanNumsArr[i][parseInt(inputArray[i])] + romanNumerals;
+//   }  
+// };
+
+
+// ******* Fourth Test --Final Solution ********
+
 var romanNumsArr = [[ "","I","II","III","IV","V","VI","VII","VIII","IX","X"],
                 ["XX","XXX","XL","L","LX","LXX","LXXX","XC"],
-                ["C","CC","CCC","CD","D","DC","DCC","DCCC","CM",]];
+                ["C","CC","CCC","CD","D","DC","DCC","DCCC","CM",],
+                ["","M","MM","MMM"]];  // This last array handles numbers from 1000-3999.
+                // There is no key on our keyboard for 5000, so 4000 and up are not possible
+                // because it would be MV (where V stands for 5000)
 
 
 function makeRomNumbs(num){
